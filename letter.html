@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Secret</title>
+<style>
+body{
+  background: linear-gradient(to right,#f8cdda,#f48fb1);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  font-family:sans-serif;
+}
+.box{
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+input{
+  padding:10px;
+  font-size:18px;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+button{
+  margin-top:15px;
+  padding:10px 20px;
+  background:#ff4f88;
+  color:white;
+  border:none;
+  border-radius:10px;
+  font-size:16px;
+}
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h2>กรอกรหัสผ่าน 🔒</h2>
+  <input type="password" id="password" placeholder="ใส่รหัส">
+  <br>
+  <button onclick="check()">ยืนยัน</button>
+</div>
+
+<script>
+function check(){
+  var pass = document.getElementById("password").value;
+  if(pass === "123456"){
+    window.location.href="letter.html";
+  }else{
+    alert("รหัสผิดนะคะ 💔");
+  }
+}
+</script>
+
+</body>
+</html>
